@@ -21,10 +21,9 @@ light_source {
 }
 
 
-// use room object from objects.inc with parquet texture from textures.inc
 object {
   Room
-  texture { murs } // Applying the "parquet" texture to the "Room" object
+  texture { beige_wall }
 }
 
 object {
