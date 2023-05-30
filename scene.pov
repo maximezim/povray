@@ -5,14 +5,15 @@
 #include "textures.inc"
 #include "glass.inc"
 #include "woods.inc"
+#include "lamp.inc"
 
 // camera
 camera {
-  location <10, 100, 10>
-  look_at <100, 100, 100>
+  location <400, 100, 600>
+  look_at <10, 100, 600>
   right x*image_width/image_height
   up y
-  angle 100
+  angle 110
 }
 
 // light
@@ -29,4 +30,12 @@ object {
 object {
   Sol 
   texture { planche }
+}
+
+object {
+  sofa 
+  texture { sofa_texture }
+  rotate <0, 0, 0>
+  translate <0, 0, 380>
+  
 }

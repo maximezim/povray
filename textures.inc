@@ -38,9 +38,19 @@
   }
   normal {
     bumps 0.2
-    scale 0.02
+    scale 0.5
     octaves 6
     turbulence 0.5
+  }
+}
+
+#declare sofa_texture = texture {
+  pigment { color rgb <0.8, 0.6, 0.4> }
+  finish {
+    ambient 0.2
+    diffuse 0.4
+    specular 0.5
+    reflection 0.1
   }
 }
 
