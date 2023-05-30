@@ -31,5 +31,3 @@ object {
   Sol 
   texture { planche }
 }
-
-
