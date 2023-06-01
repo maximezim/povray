@@ -12,3 +12,21 @@
 // #declare plaintes = union {
     
 // }
+
+#declare Carpet = box { 
+  <0, 0, 0>, <100, 1, 250>
+  texture { 
+    pigment { 
+      marble color_map { 
+        [0.0 rgb <0.5,0,0>]
+        [0.5 rgb <1,0,0>]
+        [0.6 rgb <0.8,0,0>]
+        [1.0 rgb <0.5,0,0>]
+      }
+      turbulence 0.15
+      scale 10
+    }
+    finish { ambient 0.3 diffuse 0.6 reflection 0.01 }
+    normal { quilted 1 control0 0.5 control1 0.9 scale 0.24 turbulence 1 }
+  }
+}
