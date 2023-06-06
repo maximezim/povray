@@ -9,11 +9,11 @@
 
 // camera
 camera {
-  location <400, 100, 600>
-  look_at <0, 100, 0>
+  location <250, 200, 350>
+  look_at <500, 100, 700>
   right x*image_width/image_height
   up y
-  angle 110
+  angle 90
 }
 
 // light
@@ -38,7 +38,9 @@ object {
   rotate <0, 0, 0>
   translate <0, 0, 380>
 }
-
-object {plinthes pigment {color Blue}}
+union {
+  object {plinthes pigment {color rgb<0.63,0.53,0.5>} translate <0, 0, 705>}
+  object {plinthes pigment {color rgb<0.63,0.53,0.5>} rotate <0, 90, 0> translate <505, 0, 705>}
+}
 
 object { Carpet translate <200, 1, 400> }

@@ -12,10 +12,12 @@
 }
 
 #declare plinthes = union {
-  // sor {
-  //   8,
-  //   <0, 1, 2>, 
-  // }
+  lathe { 
+    linear_spline 
+    5,
+    <0, 0>, <0, 10>, <10, 10>, <10, 0>, <0, 0>
+    scale <100, 1, 1>
+  }
 }
 
 #declare Carpet = box { 
