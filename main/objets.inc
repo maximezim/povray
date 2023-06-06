@@ -67,11 +67,6 @@
     scale 4
 }
 
-// #declare meubletv = difference {
-//   box { <0, 0, 0>, <100, 50, 50> }
-//   box { <3, 3, -10>, <97, 47, 55> }
-// }
-
 #declare meubletv = 
 difference {
   prism {
@@ -82,3 +77,10 @@ difference {
   }
   box { <5, 3, -10>, <45, 97, 45> }
 }
+
+// #declare ecran = 
+// on veut faire un ecran qui emet de la lumière
+// avec une image transparente dessus
+// et un cadre noir autour
+
+

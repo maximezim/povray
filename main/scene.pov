@@ -87,3 +87,7 @@ object {
   meubletv texture {meubletele} rotate <90, 0, 90> translate <350, 70, 410>
   // rajouter pieds ou coller contre le mur
 }
+
+// object {
+//  ecran translate <250, 100, 410>
+// }
