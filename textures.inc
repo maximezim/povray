@@ -54,3 +54,20 @@
   }
 }
 
+#declare woodtable = texture{
+  pigment{
+    image_map{
+      png "textures/woodtable_color.png"
+    }
+  }
+  normal {
+    bump_map {
+      png "textures/woodtable_bump.png"
+    }
+  }
+  finish {
+    ambient 0.2
+    diffuse 0.4
+    specular 0.5
+  }
+}

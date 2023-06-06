@@ -9,8 +9,8 @@
 
 // camera
 camera {
-  location <250, 200, 350>
-  look_at <500, 100, 700>
+  location <200, 180, 250>
+  look_at <400, 100, 700>
   right x*image_width/image_height
   up y
   angle 90
@@ -43,4 +43,16 @@ union {
   object {plinthes pigment {color rgb<0.63,0.53,0.5>} rotate <0, 90, 0> translate <505, 0, 705>}
 }
 
-object { Carpet translate <200, 1, 400> }
+object { Carpet translate <90, 1, 410>
+  scale <2, 1, 1>
+}
+
+// 4 obejcts pied table + a box on top
+union {
+  object { piedtable texture {woodtable} translate <300, 0, 450>}
+  object { piedtable texture {woodtable} translate <300, 0, 600>}
+  object { piedtable texture {woodtable} translate <400, 0, 450>}
+  object { piedtable texture {woodtable} translate <400, 0, 600>}
+  box { <290, 60, 440>, <410, 70, 610> texture {woodtable} }
+  translate <-70, 0, 20>
+}
