@@ -1,3 +1,5 @@
+#include "functions.inc"
+
 #declare Room = box { <0, 0, 0>, <500, 300, 700> }
 
 #declare Sol = plane { y, 1 }
@@ -9,9 +11,12 @@
   box { <0, 0, 240>, <100, 70, 320> }
 }
 
-// #declare plaintes = union {
-    
-// }
+#declare plinthes = union {
+  // sor {
+  //   8,
+  //   <0, 1, 2>, 
+  // }
+}
 
 #declare Carpet = box { 
   <0, 0, 0>, <100, 1, 250>

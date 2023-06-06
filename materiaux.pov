@@ -1,6 +1,7 @@
 // définir les propriétés d'un objet
 
 material {
+    // on peut superposer plusieurs textures
     texture {
         // teinte et transparence de surface
         pigment {
@@ -24,7 +25,7 @@ material {
         finish{
             // par défaut surface mate
             // état de surface
-
+            
             ambient 0.1 // réflexion ambiante (en général 10%)
             diffuse 0.6 // réflexion diffuse (renvoie la lumière dans toutes les directions) = mat
             specular 0.4 // réflexion spéculaire (renvoie la lumière dans une direction privilégiée) = brillant/satiné

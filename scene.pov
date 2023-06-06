@@ -10,7 +10,7 @@
 // camera
 camera {
   location <400, 100, 600>
-  look_at <300, 100, 600>
+  look_at <0, 100, 0>
   right x*image_width/image_height
   up y
   angle 110
@@ -37,7 +37,8 @@ object {
   texture { sofa_texture }
   rotate <0, 0, 0>
   translate <0, 0, 380>
-  
 }
+
+object {plinthes pigment {color Blue}}
 
 object { Carpet translate <200, 1, 400> }
