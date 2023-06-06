@@ -59,11 +59,33 @@
     image_map{
       png "../textures/woodtable_color.png"
     }
+    scale <1,1,1>*100
   }
   normal {
     bump_map {
       png "../textures/woodtable_bump.png"
     }
+    scale <1,1,1>*100
+  }
+  finish {
+    ambient 0.2
+    diffuse 0.4
+    specular 0.5
+  }
+}
+
+#declare meubletele = texture{
+  pigment{
+    image_map{
+      png "../textures/meubletele_color.png"
+    }
+    scale <1,1,1>*130
+  }
+  normal {
+    bump_map {
+      png "../textures/meubletele_bump.png"
+    }
+    scale <1,1,1>*130
   }
   finish {
     ambient 0.2

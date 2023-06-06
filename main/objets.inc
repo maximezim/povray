@@ -66,3 +66,19 @@
     }
     scale 4
 }
+
+// #declare meubletv = difference {
+//   box { <0, 0, 0>, <100, 50, 50> }
+//   box { <3, 3, -10>, <97, 47, 55> }
+// }
+
+#declare meubletv = 
+difference {
+  prism {
+    cubic_spline
+    0, 100, 
+    8,
+    <0, 0>, <0, 50>, <50, 50>, <50, 0>, <0, 0>, <0, 50>, <50, 50>, <3, 0>
+  }
+  box { <5, 3, -10>, <45, 97, 45> }
+}

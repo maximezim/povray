@@ -8,8 +8,10 @@
 
 // camera
 camera {
-  location <200, 180, 250>
+  location <200, 180, 350>
   look_at <400, 100, 700>
+  // location <200, 160, 400>
+  // look_at <450, 100, 400>
   right x*image_width/image_height
   up y
   angle 90
@@ -20,6 +22,23 @@ light_source {
     <250,280,350> White * 1.0
 }
 
+plane {
+  y, 299
+  pigment { color White }
+  finish {
+    ambient 0.3
+    diffuse 0.7
+    specular 0.2
+    reflection 0.1
+    roughness 0.01
+  }
+  normal {
+    bumps 0.2
+    scale 0.5
+    octaves 6
+    turbulence 0.5
+  }
+}
 
 object {
   Room
@@ -52,6 +71,10 @@ union {
   object { piedtable texture {woodtable} translate <300, 0, 600>}
   object { piedtable texture {woodtable} translate <400, 0, 450>}
   object { piedtable texture {woodtable} translate <400, 0, 600>}
-  box { <290, 60, 440>, <410, 70, 610> texture {woodtable} }
+  box { <290, 60, 440>, <410, 65, 610> texture {woodtable} }
   translate <-70, 0, 20>
+}
+
+object {
+  meubletv texture {meubletele} rotate <90, 0, 90> translate <350, 70, 410>
 }
