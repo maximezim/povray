@@ -5,11 +5,19 @@
 #include "textures.inc"
 #include "glass.inc"
 #include "woods.inc"
+#include "rad_def.inc"
+
+global_settings {
+  assumed_gamma 1.0
+  radiosity {
+    Rad_Settings(Radiosity_IndoorLQ, no, no )
+  }
+}
 
 // camera
 camera {
-  location <200, 180, 350>
-  look_at <400, 100, 700>
+  location <150, 180, 350>
+  look_at <430, 100, 700>
   // location <200, 160, 400>
   // look_at <450, 100, 400>
   right x*image_width/image_height
@@ -19,15 +27,14 @@ camera {
 
 // light
 light_source {
-    <250,280,350> White * 1.0
+    <250,280,350> color rgb<0.9,0.9,0.8>
 }
 
 plane {
-  y, 299
+  y, 295
   pigment { color White }
   finish {
-    ambient 0.3
-    diffuse 0.7
+    ambient 0.2
     specular 0.2
     reflection 0.1
     roughness 0.01
@@ -38,6 +45,7 @@ plane {
     octaves 6
     turbulence 0.5
   }
+  
 }
 
 object {
@@ -77,4 +85,5 @@ union {
 
 object {
   meubletv texture {meubletele} rotate <90, 0, 90> translate <350, 70, 410>
+  // rajouter pieds ou coller contre le mur
 }

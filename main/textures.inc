@@ -42,6 +42,7 @@
     octaves 6
     turbulence 0.5
   }
+  scale <1,1,1>*2
 }
 
 #declare sofa_texture = texture {
