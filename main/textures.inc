@@ -57,12 +57,12 @@
 #declare woodtable = texture{
   pigment{
     image_map{
-      png "textures/woodtable_color.png"
+      png "../textures/woodtable_color.png"
     }
   }
   normal {
     bump_map {
-      png "textures/woodtable_bump.png"
+      png "../textures/woodtable_bump.png"
     }
   }
   finish {

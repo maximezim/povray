@@ -5,7 +5,6 @@
 #include "textures.inc"
 #include "glass.inc"
 #include "woods.inc"
-#include "lamp.inc"
 
 // camera
 camera {
