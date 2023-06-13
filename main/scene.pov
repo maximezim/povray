@@ -16,8 +16,12 @@ global_settings {
 
 // camera
 camera {
-  location <150, 180, 350>
-  look_at <430, 100, 700>
+    location <150, 110, 550>
+    look_at <430, 30, 550>
+    ////location <230, 100, 600>
+    //look_at <250, 80, 600>
+  //location <150, 140, 350>
+  //look_at <430, 100, 700>
   // location <200, 160, 400>
   // look_at <450, 100, 400>
   right x*image_width/image_height
@@ -82,6 +86,38 @@ union {
   box { <290, 60, 440>, <410, 65, 610> texture {woodtable} }
   translate <-70, 0, 20>
 }
+
+object {
+    canette 
+    scale <4,4,4>
+    translate<250,65,490>   
+}
+
+object{
+    plateau_saucisson
+    scale<1.5,1.5,1.5>
+    rotate<0,58,0>
+    translate<165,13,600>
+}
+
+object{
+    verre
+    scale<2,2,2>
+    translate<260,65,610>
+}
+
+object{
+    verre
+    scale<2,2,2>
+    translate<260,65,610>
+}
+
+object{
+    verre2
+    scale<2,2,2>
+    translate<240,65,510>
+}
+
 
 object {
   meubletv texture {meubletele} rotate <90, 0, 90> translate <350, 70, 410>
