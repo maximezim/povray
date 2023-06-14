@@ -8,7 +8,8 @@
 #include "rad_def.inc"
 
 global_settings {
-  assumed_gamma 1.0
+  assumed_gamma 1.8
+  max_trace_level 50
   radiosity {
     Rad_Settings(Radiosity_IndoorLQ, no, no )
   }
@@ -16,14 +17,10 @@ global_settings {
 
 // camera
 camera {
-    //location <150, 110, 550>
-    //look_at <430, 30, 550>
-    //location <230, 100, 600>
-    //look_at <250, 80, 600>
-  location <150, 140, 350>
-  look_at <430, 100, 700>
-  // location <200, 160, 400>
-  // look_at <450, 100, 400>
+  // location <150, 140, 380>
+  // look_at <430, 100, 700>
+  location <310, 140, 550>
+  look_at <450, 100, 550>
   right x*image_width/image_height
   up y
   angle 90
@@ -127,6 +124,6 @@ object {
   // rajouter pieds ou coller contre le mur
 }
 
-// object {
-//  ecran translate <250, 100, 410>
-// }
+object {
+  livres translate <430, 33, 500> 
+}

@@ -94,3 +94,19 @@
     specular 0.5
   }
 }
+
+
+#declare ecran_tele = material {
+    texture{ 
+        pigment {
+            image_map {
+                png "../textures/tele.png"
+                map_type 0 once
+            }
+            scale <118, 58, 1>
+        }
+        finish {
+            emission 0.9
+        }
+    }
+}

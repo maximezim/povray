@@ -3,6 +3,7 @@
 #include "textures.inc"
 #include "metals.inc"
 #include "woods.inc"
+#include "shapes.inc"
 
 #declare Room = box { <0, 0, 0>, <500, 300, 700> }
 
@@ -95,7 +96,7 @@ difference {
 #declare can = union{
     object { 
          Round_Cylinder(<0,0,0>, <0,5,0>,1.3,0.35,0)  
-         pigment {image_map {"coke.jpg" map_type 2} scale<1,5,1>}
+         pigment {image_map {"../textures/coke.jpg" map_type 2} scale<1,5,1>}
          scale<1,1,1>  rotate<0, 0,0> 
     } 
     cone { 
@@ -183,7 +184,7 @@ difference {
     box { <-1, 0, -1>,< 1, 0.2, 1>   
         pigment
         {image_map
-           {"saucisson.jpg" map_type 1}
+           {"../textures/saucisson.jpg" map_type 1}
          scale<1,1,1>
         } 
         scale <2,1,2> rotate<0,0,0> translate<0,1,0> 
@@ -191,7 +192,7 @@ difference {
     sphere { <0,0,0>, 1.5 
         pigment
         {image_map
-            {"saucisson.jpg"map_type 1}
+            {"../textures/saucisson.jpg" map_type 1}
          scale<3,3,3>
         } 
         scale<1,1,1>  rotate<0,0,0>  translate<0,1,0>  
@@ -417,17 +418,38 @@ difference {
 
 #declare tv = union{
     box{ <0,0,0>, <120, 60, 5> pigment{color Black}}
-    box{ <0,0,0>, <20, 10, 8> pigment {color Black} translate<45,20,8> }  
+    box{ <0,0,0>, <118, 58, 1> material {ecran_tele} translate<1,1,0> }  
 }
 
+#declare livre_text = union{
+    difference{
+      box{ <0,0,0>, <3, 30, 30> } 
+      box{ <0,0,0>, <2.8, 32, 28> translate<0.3,-1,1> }
+    }
+    box{ <0,0,0>, <2.8, 32, 28> translate<0.3,-1,1> pigment{color White}}
+}
 
-
-
-
-
-// #declare ecran = 
-// on veut faire un ecran qui emet de la lumiÃ¨re
-// avec une image transparente dessus
-// et un cadre noir autour
+#declare colorarr = array[5];
+#declare colorarr[0] = color Blue;
+#declare colorarr[1] = color Red;
+#declare colorarr[2] = color Green;
+#declare colorarr[3] = color Yellow;
+#declare colorarr[4] = color White;
+#declare Seed = seed(7845);
+ 
+#declare livres = union {
+    #declare hauteur = 0;
+        #declare largeur = 3;
+        #while (largeur < 75)
+        #declare index = rand(Seed)*5;
+            object {
+                livre_text 
+                pigment { colorarr[index] }
+                rotate<0,-90,0>
+                translate<0,hauteur,largeur>
+            }
+            #declare largeur = largeur + 4;
+        #end
+}
 
 
