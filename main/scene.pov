@@ -109,12 +109,6 @@ object{
 }
 
 object{
-    verre
-    scale<2,2,2>
-    translate<260,65,610>
-}
-
-object{
     verre2
     scale<2,2,2>
     translate<240,65,510>
