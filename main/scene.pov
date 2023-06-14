@@ -16,12 +16,12 @@ global_settings {
 
 // camera
 camera {
-    location <150, 110, 550>
-    look_at <430, 30, 550>
-    ////location <230, 100, 600>
+    //location <150, 110, 550>
+    //look_at <430, 30, 550>
+    //location <230, 100, 600>
     //look_at <250, 80, 600>
-  //location <150, 140, 350>
-  //look_at <430, 100, 700>
+  location <150, 140, 350>
+  look_at <430, 100, 700>
   // location <200, 160, 400>
   // look_at <450, 100, 400>
   right x*image_width/image_height
@@ -31,8 +31,10 @@ camera {
 
 // light
 light_source {
-    <250,280,350> color rgb<0.9,0.9,0.8>
+    <250,280,350> color rgb<0.9,0.9,0.8>*0.6
 }
+
+
 
 plane {
   y, 295
@@ -119,8 +121,15 @@ object{
 }
 
 
+object{
+    tv
+    rotate<0,90,0>
+    translate<410, 90, 600>
+        
+}
+
 object {
-  meubletv texture {meubletele} rotate <90, 0, 90> translate <350, 70, 410>
+  meubletv texture {meubletele} rotate <90, 0, 90> translate <400, 30, 490>
   // rajouter pieds ou coller contre le mur
 }
 
