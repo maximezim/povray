@@ -415,7 +415,10 @@ difference {
   } 
    
 
-
+#declare tv = union{
+    box{ <0,0,0>, <120, 60, 5> pigment{color Black}}
+    box{ <0,0,0>, <20, 10, 8> pigment {color Black} translate<45,20,8> }  
+}
 
 
 
