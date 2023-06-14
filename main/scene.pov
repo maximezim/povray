@@ -17,10 +17,10 @@ global_settings {
 
 // camera
 camera {
-  // location <150, 140, 380>
-  // look_at <430, 100, 700>
-  location <310, 140, 550>
-  look_at <450, 100, 550>
+  location <150, 140, 430>
+  look_at <430, 100, 680>
+  // location <310, 140, 550>
+  // look_at <450, 100, 550>
   right x*image_width/image_height
   up y
   angle 90
@@ -29,26 +29,6 @@ camera {
 // light
 light_source {
     <250,280,350> color rgb<0.9,0.9,0.8>*0.6
-}
-
-
-
-plane {
-  y, 295
-  pigment { color White }
-  finish {
-    ambient 0.2
-    specular 0.2
-    reflection 0.1
-    roughness 0.01
-  }
-  normal {
-    bumps 0.2
-    scale 0.5
-    octaves 6
-    turbulence 0.5
-  }
-  
 }
 
 object {
