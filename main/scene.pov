@@ -6,6 +6,7 @@
 #include "glass.inc"
 #include "woods.inc"
 #include "rad_def.inc"
+#include "lampesalon.inc"
 
 global_settings {
   assumed_gamma 1.8
@@ -106,4 +107,8 @@ object {
 
 object {
   livres translate <430, 33, 500> 
+}
+
+object {
+  Lamptot scale 8 translate <440, -8*0.7, 440> 
 }
