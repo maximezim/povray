@@ -312,10 +312,10 @@ difference {
              }                
        } 
        cylinder { <0,0,0>,<0,3,0>, 2.5
-           pigment { color rgbt<0.663,0.251,0.027,0.1>}
+           pigment { color rgbt<0.663,0.251,0.027,0.3>}
             
             interior{
-                    ior 1.5
+                    ior 0
                  }
     
            scale <1,1,1> rotate<0,0,0>  translate<0,1.1,0>
@@ -385,9 +385,9 @@ difference {
        } 
        cylinder { <0,0,0>,<0,3,0>, 2.5
           
-           pigment { color rgbt<0.2, 0.09, 0.03,0.5>} 
+           pigment { color rgbt<0.2, 0.09, 0.03,0.3>} 
             interior{
-                    ior 1.5
+                    ior 0
                  }
     
            scale <1,1,1> rotate<0,0,0>  translate<0,1.1,0>
