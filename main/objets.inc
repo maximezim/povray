@@ -452,4 +452,127 @@ difference {
         #end
 }
 
+#declare manette =
+merge{
+    difference{
+        union{
+            sphere{ <0,0,0>, 3 pigment{color White}
+                    scale<1,0.8,2.5>  rotate<-12,5,0>  translate<40,40.7,15>  
+                  }   
+            sphere{ <0,0,0>, 3 pigment{color White}
+                    scale<1,0.8,2.5>  rotate<-12,-5,0> translate<58,40.7,15>  
+                  }    
+            box{ <0,0,0>, <16, 3.4, 8> pigment{color rgb<0.1,0.1,0.1>} rotate<0,0,0> translate<41,39.2,14>}   
+        }
+        box{ <0,0,0>, <25, 2, 8> pigment{color White*0.96} rotate<0,0,0> translate<38,42.7,14>} 
+    }    
+    box{ <0,0,0>, <8, 0.1, 4> pigment{color White} rotate<0,0,0> translate<45,42.6,17.7>}
+    cylinder { <0,0,0>,<0,0.3,0>, 0.30 
+
+           texture { pigment { color rgb<1,1,1> }
+                   
+                     finish  { phong 0.5 reflection{ 0.00 metallic 0.00} } 
+                   } 
+
+           scale <1,1,1> rotate<0,0,0> translate<44,42.6,16>
+         }
+    cylinder { <0,0,0>,<0,0.3,0>, 0.30 
+
+           texture { pigment { color rgb<1,1,1> }
+                  
+                     finish  { phong 0.5 reflection{ 0.00 metallic 0.00} } 
+                   } 
+
+           scale <1,1,1> rotate<0,0,0> translate<54,42.6,16>
+         }
+    
+    sphere{ <0,0,0>, 1.4 pigment{color White}
+                    scale<1,0.35,1>  translate<54,43.3,16> 
+                  } 
+    sphere{ <0,0,0>, 1.4 pigment{color White}
+                    scale<1,0.35,1>  translate<44,43.3,16> 
+                  } 
+                  
+    sphere{ <0,0,0>, 0.7 pigment{color Black}
+                    scale<1,0.35,1>  translate<58.7,42.8,19> 
+                  } 
+                  
+    sphere{ <0,0,0>, 0.7 pigment{color Black}
+                    scale<1,0.35,1>  translate<56,42.8,19> 
+    } 
+      
+    sphere{ <0,0,0>, 0.7 pigment{color Black}
+                    scale<1,0.35,1>  translate<57.35,42.8,20.4> 
+                  } 
+    sphere{ <0,0,0>, 0.7 pigment{color Black}
+                    scale<1,0.35,1>  translate<57.35,42.8,17.6> 
+                  }                       
+}   
+
+#declare miroir = union{
+    intersection{
+        box{ <0,0,0>, <0.5,20, 20> 
+                   texture{ T_Wood1 
+                        normal { wood 0.5 scale 0.3 turbulence 0.1}
+                        finish { phong 1 } 
+                        rotate<60,0,45> scale 0.5
+                      }  
+            rotate<0,0,0> translate<0,0,0>
+        }
+        sphere { <0,0,0>, 5
+    
+            texture{ T_Wood1 
+                    normal { wood 0.5 scale 0.3 turbulence 0.1}
+                    finish { phong 1 } 
+                    rotate<60,0,45> scale 0.5
+                  } 
+    
+              scale<1,1,1>  rotate<0,0,0>  translate<0,10,10>  
+           }  
+    }
+    intersection{
+        box{ <0,0,0>, <0.1,20, 20> 
+             material{
+                texture{
+                    pigment{
+                        color rgb <0.0, 0.0, 0.0>
+                    }
+                    finish {
+                        ambient 0.3 
+                        diffuse 0.0 
+                        brilliance 20.0 
+                        phong 1.0 
+                        phong_size 90.0 
+                        specular 1.0 
+                        roughness 0.001 
+                        reflection 1.0
+                    }
+                }
+            }    
+            rotate<0,0,0> translate<0.5,0,0>
+        }
+        sphere { <0,0,0>, 4.7
+            material{
+            texture{
+                pigment{
+                    color rgb <0.0, 0.0, 0.0>
+                }
+                finish {
+                    ambient 0.3 
+                    diffuse 0.0 
+                    brilliance 20.0 
+                    phong 1.0 
+                    phong_size 90.0 
+                    specular 1.0 
+                    roughness 0.001 
+                    reflection 1.0
+                }
+             }
+          }  
+          scale<1,1,1>  rotate<0,0,0>  translate<0.5,10,10>  
+       }  
+    }
+    scale<1,1.3,1>
+}
+
 
