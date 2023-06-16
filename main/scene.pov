@@ -109,6 +109,28 @@ object {
   livres translate <430, 33, 500> 
 }
 
+object{
+    manette
+    scale<1,1.3,1>
+    rotate<0,120,0>
+    translate<310,15.5,530>
+}
+
+object{
+    manette
+    scale<1,1.3,1>
+    rotate<0,70,0>
+    translate<280,15.5,640>
+}
+
+object{
+    miroir
+    scale<8,8,8>
+    rotate<0,90,0>
+    translate<200,60,700>
+    
+}
+
 // object {
 //   Lamptot scale 8 translate <440, -8*0.7, 440> 
 // }
