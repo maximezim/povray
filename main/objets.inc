@@ -575,4 +575,40 @@ merge{
     scale<1,1.3,1>
 }
 
+#declare textChips = texture {
+            pigment { 
+                image_map { 
+                    png "../textures/chips2.png" 
+                    map_type 0 
+                }
+                translate <-0.6,0,0>
+                scale 3.5
+            }
+        }
+
+#declare bolChips = union{
+    cylinder {
+        <0, 0, 0>, <0, 0.01, 0>, 2 
+        translate <0, 12, 0>
+        texture {textChips rotate<-90,0,0>}
+        scale <4.8,1,4.8>
+    }
+    sor {
+        5,
+        <2, 0>
+        <2,2>
+        <4,4>
+        <5,6>
+        <5.5,9>
+        texture {
+        pigment {White}
+        finish {
+            specular 0.7
+            reflection 0.1
+            diffuse 0.2
+        }
+    }
+        scale 2
+    }
+}
 

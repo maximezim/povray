@@ -18,8 +18,8 @@ global_settings {
 
 // camera
 camera {
-  location <150, 140, 430>
-  look_at <430, 100, 680>
+  location <170, 140, 450>
+  look_at <430, 100, 650>
   // location <310, 140, 550>
   // look_at <450, 100, 550>
   right x*image_width/image_height
@@ -131,6 +131,10 @@ object{
     
 }
 
-// object {
-//   Lamptot scale 8 translate <440, -8*0.7, 440> 
-// }
+object {
+  Lamptot scale 8 translate <440, -8*0.7, 440> 
+}
+
+object {
+  bolChips translate <300, 65, 530>
+}
