@@ -1,5 +1,5 @@
 #declare Light=light_source {<0,0,0>
-    color rgb<1,0.8,0.6>*240
+    color rgb<1,0.8,0.6>*400
         area_light x,y 80, 80 jitter adaptive 1
     fade_distance 3
     fade_power 2

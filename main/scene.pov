@@ -28,9 +28,9 @@ camera {
 }
 
 // light
-light_source {
-    <250,280,350> color rgb<0.9,0.9,0.8>*0.6
-}
+// light_source {
+//     <250,280,350> color rgb<0.9,0.9,0.8>*0.6
+// }
 
 object {
   Room
@@ -136,5 +136,9 @@ object {
 }
 
 object {
-  bolChips translate <300, 65, 530>
+  bolChips translate <300, 61, 530>
+}
+
+object {
+  projecteur rotate<-90,0,180> translate <240, 270, 700>
 }

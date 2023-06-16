@@ -612,3 +612,65 @@ merge{
     }
 }
 
+#declare spot = light_source {
+    <15, 15, 0> // <x, y, z>
+    color White * 4
+    spotlight
+    radius 6
+    falloff 20
+    tightness 10
+    point_at <0, 45, 45>
+}
+
+#declare projecteur = union {
+    difference {
+        cylinder {
+            <0, 0, 0>, <0, 20, 0>, 6 // center of one end, center of other end, radius
+            rotate <45, 0, 0>
+            texture {
+                pigment {
+                    P_Chrome2
+                    
+                }
+            }
+            finish { ambient 0.2 diffuse 0.8 metallic specular 0.2 roughness 0.001 }
+        }
+        box {
+            <-20, -20, -20>, <20, 4, 20> // <x, y, z> near lower left corner, <x, y, z> far upper right corner
+        }
+        cylinder {
+            <0, 19.8, 0>, <0, 21, 0>, 5 // center of one end, center of other end, radius
+            rotate <45, 0, 0> // <x°, y°, z°>
+        }
+    }
+    difference {
+    cylinder {
+        <0, -10, 0>, <0, 11, 0>, 1 // center of one end, center of other end, radius
+        translate <0, 0, 16> // <x, y, z>
+        texture {
+                pigment {
+                    P_Chrome2
+                }
+            }
+        finish { ambient 0.2 diffuse 0.8 metallic specular 0.2 roughness 0.001 }
+    }
+    box {
+            <-20, -20, -20>, <20, 4, 20> // <x, y, z> near lower left corner, <x, y, z> far upper right corner
+            
+        }
+    }
+    cylinder {
+            <0, 19.9, 0>, <0, 20, 0>, 5 // center of one end, center of other end, radius
+            rotate <45, 0, 0> // <x°, y°, z°>
+            pigment { 
+                color White
+            }
+            finish {
+                emission 0.9
+            }
+        }
+    object { spot }
+    translate <0, -4, 0> // <x, y, z>
+    
+}
+
