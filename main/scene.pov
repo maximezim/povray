@@ -109,6 +109,6 @@ object {
   livres translate <430, 33, 500> 
 }
 
-object {
-  Lamptot scale 8 translate <440, -8*0.7, 440> 
-}
+// object {
+//   Lamptot scale 8 translate <440, -8*0.7, 440> 
+// }
