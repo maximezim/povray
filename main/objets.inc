@@ -614,7 +614,7 @@ merge{
 
 #declare spot = light_source {
     <15, 15, 0> // <x, y, z>
-    color White * 4
+    color rgb <1, 1, 0.93> * 2
     spotlight
     radius 6
     falloff 20
@@ -622,7 +622,7 @@ merge{
     point_at <0, 45, 45>
 }
 
-#declare projecteur = union {
+#declare projecteurbase = union {
     difference {
         cylinder {
             <0, 0, 0>, <0, 20, 0>, 6 // center of one end, center of other end, radius
@@ -663,14 +663,32 @@ merge{
             <0, 19.9, 0>, <0, 20, 0>, 5 // center of one end, center of other end, radius
             rotate <45, 0, 0> // <x°, y°, z°>
             pigment { 
-                color White
+                color rgb <1, 1, 0.93>
             }
             finish {
-                emission 0.9
+                emission 0.8
             }
         }
-    object { spot }
-    translate <0, -4, 0> // <x, y, z>
-    
 }
 
+#declare projecteur = union{
+    object { projecteurbase }
+    object { spot }
+     translate <0, -4, 0>
+}
+
+#declare spot2 = light_source {
+    <15, 15, 0> // <x, y, z>
+    color rgb <1, 1, 0.93> * 0.8
+    spotlight
+    radius 6
+    falloff 20
+    tightness 10
+    point_at <0, 45, 45>
+}
+
+#declare projecteur2 = union{
+    object { projecteurbase }
+    object { spot2 }
+     translate <0, -4, 0>
+}

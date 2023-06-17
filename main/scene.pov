@@ -12,14 +12,14 @@ global_settings {
   assumed_gamma 1.8
   max_trace_level 50
   radiosity {
-    Rad_Settings(Radiosity_IndoorLQ, no, no )
+    Rad_Settings(Radiosity_IndoorHQ, no, no )
   }
 }
 
 // camera
 camera {
-  location <170, 140, 450>
-  look_at <430, 100, 650>
+  location <140, 140, 440>
+  look_at <430, 100, 660>
   // location <310, 140, 550>
   // look_at <450, 100, 550>
   right x*image_width/image_height
@@ -132,7 +132,7 @@ object{
 }
 
 object {
-  Lamptot scale 8 translate <440, -8*0.7, 440> 
+  Lamptot scale 8 translate <440, -8*0.72, 440> 
 }
 
 object {
@@ -140,5 +140,9 @@ object {
 }
 
 object {
-  projecteur rotate<-90,0,180> translate <240, 270, 700>
+  projecteur rotate<-90,0,180> translate <240, 250, 700>
+}
+
+object {
+  projecteur2 rotate<-90,90,180> translate <90, 270, 420>
 }
